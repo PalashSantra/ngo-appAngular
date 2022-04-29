@@ -1,0 +1,32 @@
+<div *ngIf="type==='secondary'" nz-row nzJustify="end" class="bounceInDown">
+    <div nz-col nzMd="16" class="secondary-menu">
+        <ul class="nav secondary-nav">
+            <li *ngFor="let menu of dataset">
+                <a href="#">{{menu.title}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div *ngIf="type==='primary'" nz-row nzJustify="end" nzAlign="top">
+    <div nz-col nzMd="20" class="primary-menu">
+        <ul nz-menu nzMode="horizontal" class="nav" nzJustify="end">
+            <ng-container *ngFor="let menu of dataset">
+                <li *ngIf="!menu.subMenu" nz-menu-item (click)="sendTitle(menu.title)">{{menu.title}}</li>
+                <li *ngIf="menu.subMenu" nz-submenu [nzTitle]="menu.title">
+                    <ul>
+                        <ng-container *ngFor="let subMenu of menu.subMenu">
+                            <li *ngIf="!subMenu.subMenu" nz-menu-item>{{subMenu.title}}</li>
+                            <li *ngIf="subMenu.subMenu" nz-submenu [nzTitle]="subMenu.title">
+                                <ul>
+                                    <ng-container *ngFor="let subSubMenu of subMenu.subMenu">
+                                        <li nz-menu-item>{{subSubMenu.title}}</li>
+                                    </ng-container>
+                                </ul>
+                            </li>
+                        </ng-container>
+                    </ul>
+                </li>
+            </ng-container>
+        </ul>
+    </div>
+</div>

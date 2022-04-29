@@ -1,0 +1,23 @@
+nz-header {
+    background: #f0ecec;
+    color: rgb(31, 29, 29);
+    opacity: 0.6;
+    height: fit-content;
+}
+
+.menu-section-sm {
+    display: none;
+}
+
+@media (max-width: 940px) {
+    .menu-section-lg {
+        display: none;
+    }
+    .menu-section-sm {
+        display: block;
+        float: right;
+    }
+    .logo {
+        width: 80%;
+    }
+}

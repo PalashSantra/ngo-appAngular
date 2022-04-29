@@ -1,0 +1,56 @@
+[{
+        "orderId": 1,
+        "title": "Home",
+        "link": "#"
+    },
+    {
+        "orderId": 2,
+        "title": "About Us",
+        "link": "#",
+        "subMenu": [{
+                "orderId": 1,
+                "title": "Partners",
+                "link": "#"
+            },
+            {
+                "orderId": 1,
+                "title": "Contact",
+                "link": "#"
+            },
+            {
+                "orderId": 1,
+                "title": "Terms & Condition",
+                "link": "#"
+            },
+            {
+                "orderId": 1,
+                "title": "Privacy Policy",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "orderId": 3,
+        "title": "Team",
+        "link": "#"
+    },
+    {
+        "orderId": 4,
+        "title": "Projects",
+        "link": "#"
+    },
+    {
+        "orderId": 5,
+        "title": "Research",
+        "link": "#",
+        "subMenu": [{
+            "title": "Publication",
+            "link": "#"
+        }]
+    },
+    {
+        "orderId": 6,
+        "title": "Gallery",
+        "link": "#"
+    }
+]

@@ -1,0 +1,19 @@
+<div nz-row>
+    <div nz-col nzMd="8" nzLg="8" nzXl="8" class="logo" style="float: left;">{{menuClicked}}</div>
+    <div nz-col nzMd="16" nzLg="16" nzXl="16" class="menu-section-lg">
+        <app-menu type="secondary" [dataset]="secondaryMenu"></app-menu>
+        <app-menu (menuDataEmitter)="setMenuClicked($event)" type="primary" [dataset]="primaryMenu"></app-menu>
+    </div>
+    <div nz-col style="float: right;">
+        <div nz-row nzJustify="end">
+            <div nz-col class="menu-section-sm">
+                <ul>
+                    <li></li>
+                </ul>
+                <button nz-button nzType="primary">
+                    &#9776;
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
